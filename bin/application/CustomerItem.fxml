@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox fx:id="itemC" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="53.0" prefWidth="695.0" spacing="60.0" style="-fx-background-color: #02030A; -fx-background-radius: 5; -fx-background-insets: 0;" xmlns:fx="http://javafx.com/fxml/1">
+	  <children>
+       <Label alignment="CENTER" prefHeight="18.0" prefWidth="149.0" text="BMW" textFill="#b7c3d7" />
+       <Label layoutX="253.0" layoutY="50.0" prefHeight="42.0" prefWidth="212.0" text="10/12/2020 - 15/2/2020" textFill="#b7c3d7" />
+       <Label alignment="CENTER" prefHeight="18.0" prefWidth="115.0" text="\$200" textFill="#b7c3d7" translateX="-30.0">
+           <HBox.margin>
+               <Insets />
+           </HBox.margin>
+       </Label>
+       <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="141.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@style.css" text="active" translateX="-20.0">
+           <HBox.margin>
+               <Insets />
+           </HBox.margin>
+       </Button>
+    </children>
+    <effect>
+    <DropShadow blurType="GAUSSIAN" height="5.0" radius="2.0" width="5.0" />
+    </effect>
+</HBox>
+

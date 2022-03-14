@@ -1,0 +1,7 @@
+porsche     blue        2020    5698        112     1235
+BMW         white       2020    563.0       488     1255
+mercedes    black       2017    8452.0      889     225
+mercedes    green       2020    225.0       1544    555
+lexus       white       2020    2651.0      1896    232
+GTR         white       2019    122.0       1444    548.0
+BMW         red         2020    5545.0      44      123.0

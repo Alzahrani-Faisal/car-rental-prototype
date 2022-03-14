@@ -1,0 +1,641 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminController">
+	<children>
+        <VBox alignment="TOP_CENTER" prefHeight="576.0" prefWidth="256.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="73.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/admin.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets bottom="10.0" top="50.0" />
+                    </VBox.margin></ImageView>
+                <Label text="Admin" textFill="#e7e5e5">
+                    <VBox.margin>
+                        <Insets bottom="20.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Button fx:id="btnOverview" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Overview" textFill="#e7e5e5">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/icons8_Home_32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnUsers" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Users">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/icons8_Person_32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+            <Button fx:id="btnCars" alignment="BASELINE_LEFT" graphicTextGap="22.0" layoutX="10.0" layoutY="305.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Cars">
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/sedan.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+                <Button fx:id="btnBlacklist" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Blacklist">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/ban-circle-symbol.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnInfo" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Account Information">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/information.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+                <Button fx:id="btnSignout" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#handleClicks" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Sign Out">
+                    <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/icons8_Sign_Out_32px.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets left="50.0" />
+                    </padding>
+                </Button>
+            <ImageView fitHeight="47.0" fitWidth="155.0" pickOnBounds="true" preserveRatio="true" translateY="140.0">
+               <image>
+                  <Image url="@images/luxurycars_logo.png" />
+               </image>
+            </ImageView>
+            </children>
+        </VBox>
+        <StackPane layoutX="258.0" prefHeight="576.0" prefWidth="793.0" style="-fx-background-color: #02030A;">
+            <children>
+                <Pane fx:id="panelOverview" prefHeight="554.0" prefWidth="793.0">
+                    <children>
+                        <Label layoutX="57.0" layoutY="80.0" text="Luxury Cars - Admin's Dashboard " textFill="#e7e5e5">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="121.0" prefHeight="92.0" prefWidth="661.0" spacing="50.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label fx:id="totalOrders" text="0" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Total Orders" textFill="#e7e5e5" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label fx:id="deliveredOrders" text="0" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Total delivered" textFill="#e7e5e5" />
+                                    </children>
+                                </VBox>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                    <children>
+                                        <Label fx:id="pendingOrders" text="0" textFill="#f54468">
+                                            <font>
+                                                <Font name="System Bold" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Peding Orders" textFill="#e7e5e5" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="13.0" layoutY="178.0" prefHeight="42.0" prefWidth="746.0" spacing="80.0" style="-fx-background-color: #02030A;" translateY="40.0">
+                            <children>
+                                <Label text="Car ID" textFill="#e7e5e5" translateX="-100.0">
+                                    <HBox.margin>
+                                        <Insets left="50.0" />
+                                    </HBox.margin>
+                                </Label>
+                                <Label text="Customer's email" textFill="#e7e5e5" translateX="-70.0">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                                <Label text="Duration" textFill="#e7e5e5" translateX="-30.0">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                                <Label alignment="CENTER" prefHeight="18.0" prefWidth="33.0" text="Price" textFill="#e7e5e5" translateX="13.0">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                                <Label text="Status" textFill="#e7e5e5" translateX="-5.0">
+                                    <HBox.margin>
+                                        <Insets />
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <ScrollPane layoutX="14.0" layoutY="232.0" prefHeight="320.0" prefWidth="746.0" stylesheets="@style.css" translateY="50.0">
+                            <content>
+                                <VBox fx:id="pnItems" prefHeight="318.0" prefWidth="744.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </padding>
+                                </VBox>
+                            </content>
+                        </ScrollPane>
+                    </children>
+                </Pane>
+                <Pane fx:id="panelUsers" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label layoutX="57.0" layoutY="80.0" text="Luxury Cars - Admin's Dashboard " textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="121.0" prefHeight="92.0" prefWidth="661.0" spacing="50.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="usersNumber" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Users" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="customersNumber" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Customers" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="managersNumber" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Managers" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="310.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="employeesNumber" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Employees" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="13.0" layoutY="178.0" prefHeight="42.0" prefWidth="746.0" spacing="80.0" style="-fx-background-color: #02030A;" translateY="40.0">
+                     <children>
+                        <Label text="Name" textFill="#e7e5e5" translateX="-205.0">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Email" textFill="#e7e5e5" translateX="-30.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Type" textFill="#e7e5e5" translateX="150.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ScrollPane layoutX="14.0" layoutY="232.0" prefHeight="320.0" prefWidth="746.0" stylesheets="@style.css" translateY="50.0">
+                     <content>
+                        <VBox fx:id="pnItems1" prefHeight="318.0" prefWidth="744.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <Button fx:id="addManager" layoutX="490.0" layoutY="-16.0" mnemonicParsing="false" onMouseClicked="#goToAddNewManagerPanel" prefHeight="31.0" prefWidth="120.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Add Manager" textFill="WHITE" translateY="100.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addEmployee" layoutX="629.0" layoutY="-17.0" mnemonicParsing="false" onMouseClicked="#goToAddNewEmployeePanel" prefHeight="31.0" prefWidth="132.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Add Employee" textFill="WHITE" translateY="100.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+                <Pane fx:id="panelCars" prefHeight="200.0" prefWidth="200.0" style="-fx-text-inner-color: white;" visible="false">
+               <children>
+                  <Label fx:id="emptyCarFieldsMessage" text="Please fill in all fields" textFill="RED" translateX="640.0" translateY="590.0" visible="false" />
+                  <TableView fx:id="carsTable" layoutX="23.0" layoutY="135.0" prefHeight="427.0" prefWidth="739.0" stylesheets="@tableStyle.css">
+                    <columns>
+                      <TableColumn fx:id="tableName" prefWidth="145.0" styleClass="table-cell" text="name" />
+                      <TableColumn fx:id="tableColor" minWidth="5.0" prefWidth="136.0" styleClass="table-cell" text="color" />
+                        <TableColumn fx:id="tableYear" minWidth="0.0" prefWidth="76.0" styleClass="table-cell" text="year" />
+                        <TableColumn fx:id="tableMileage" prefWidth="126.0" styleClass="table-cell" text="mileage" />
+                        <TableColumn fx:id="tableId" prefWidth="126.0" styleClass="table-cell" text="ID" />
+                        <TableColumn fx:id="tablePrice" prefWidth="129.0" styleClass="table-cell" text="Price" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="23.0" layoutY="80.0" text="Luxury Cars - Admin's Dashboard " textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="carName" layoutX="-36.0" prefHeight="35.0" prefWidth="168.0" promptText="Name" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateX="60.0" translateY="570.0" />
+                  <TextField fx:id="carColor" layoutX="234.0" prefHeight="35.0" prefWidth="168.0" promptText="Color" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="570.0" />
+                  <TextField fx:id="carYear" layoutX="25.0" layoutY="53.0" prefHeight="35.0" prefWidth="168.0" promptText="Year" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="570.0" />
+                  <TextField fx:id="carMileage" layoutX="235.0" layoutY="73.0" prefHeight="35.0" prefWidth="168.0" promptText="Mileage" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="550.0" />
+                  <Button fx:id="addCar" layoutX="678.0" layoutY="27.0" mnemonicParsing="false" onMouseClicked="#addCar" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Add" textFill="WHITE" translateY="560.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteCar" layoutX="679.0" layoutY="139.0" mnemonicParsing="false" onMouseClicked="#deleteCar" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Delete" textFill="WHITE" translateY="490.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="carId" layoutX="448.0" layoutY="570.0" prefHeight="35.0" prefWidth="168.0" promptText="ID" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                  <TextField fx:id="carPrice" layoutX="448.0" layoutY="621.0" prefHeight="35.0" prefWidth="168.0" promptText="Price" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+               </children></Pane>
+                <Pane fx:id="panelBlacklist" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <Label layoutX="57.0" layoutY="80.0" text="Luxury Cars - Admin's Dashboard " textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" layoutX="45.0" layoutY="121.0" prefHeight="92.0" prefWidth="661.0" spacing="50.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="92.0" prefWidth="186.0">
+                           <children>
+                              <Label fx:id="blacklistNumber" text="0" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Blacklisted Accounts" textFill="#e7e5e5" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="13.0" layoutY="178.0" prefHeight="42.0" prefWidth="746.0" spacing="80.0" style="-fx-background-color: #02030A;" translateY="40.0">
+                     <children>
+                        <Label text="Name" textFill="#e7e5e5" translateX="-210.0">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Email" textFill="#e7e5e5">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <ScrollPane layoutX="14.0" layoutY="232.0" prefHeight="320.0" prefWidth="746.0" stylesheets="@style.css" translateY="50.0">
+                     <content>
+                        <VBox fx:id="pnItems2" prefHeight="318.0" prefWidth="744.0" spacing="5.0" style="-fx-background-color: #02030A;">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+                  <Button fx:id="addToBlacklist" layoutX="583.0" layoutY="-16.0" mnemonicParsing="false" onMouseClicked="#goToAddToBlacklistPanel" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Add" textFill="WHITE" translateY="100.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+            <Pane fx:id="panelAccountInfo" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="793.0" visible="false">
+               <children>
+                  <StackPane layoutX="14.0" layoutY="173.0" prefHeight="427.0" prefWidth="636.0" translateY="-50.0">
+                     <children>
+                        <Pane fx:id="pn1Customer" prefHeight="427.0" prefWidth="464.0" stylesheets="@style.css">
+                           <children>
+                              <TextField fx:id="name" editable="false" layoutX="25.0" layoutY="75.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                              <Label layoutX="25.0" layoutY="63.0" text="Name" textFill="WHITE" />
+                              <TextField fx:id="email" editable="false" layoutX="25.0" layoutY="6.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="150.0" />
+                              <Label layoutY="11.0" text="Email " textFill="WHITE" translateX="25.0" translateY="130.0" />
+                              <PasswordField fx:id="password" editable="false" layoutX="25.0" layoutY="92.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020a; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="150.0" />
+                              <Label layoutX="25.0" layoutY="74.0" text="Password" textFill="WHITE" translateY="150.0" />
+                              <Button fx:id="editName" layoutX="391.0" layoutY="77.0" mnemonicParsing="false" onMouseClicked="#editData" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Edit" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="editEmail" layoutX="391.0" layoutY="158.0" mnemonicParsing="false" onMouseClicked="#editData" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Edit" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="editPassword" layoutX="391.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#editData" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Edit" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="savePassword" layoutX="391.0" layoutY="244.0" mnemonicParsing="false" onMouseClicked="#saveChange" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="save" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="saveEmail" layoutX="391.0" layoutY="158.0" mnemonicParsing="false" onMouseClicked="#saveChange" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="save" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="saveName" layoutX="391.0" layoutY="77.0" mnemonicParsing="false" onMouseClicked="#saveChange" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="save" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <PasswordField fx:id="passwordConfirmation" layoutX="24.0" layoutY="322.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020a; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" visible="false" />
+                              <Label fx:id="confirmationLabel" layoutX="25.0" layoutY="305.0" text="Confirm Password" textFill="WHITE" visible="false" />
+                              <Button fx:id="CancelEditingName" layoutX="453.0" layoutY="76.0" mnemonicParsing="false" onMouseClicked="#cancelEditing" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Cancel" textFill="WHITE" translateX="50.0" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="CancelEditingEmail" layoutX="503.0" layoutY="158.0" mnemonicParsing="false" onMouseClicked="#cancelEditing" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Cancel" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="CancelEditingPassword" layoutX="503.0" layoutY="243.0" mnemonicParsing="false" onMouseClicked="#cancelEditing" prefHeight="31.0" prefWidth="82.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Cancel" textFill="WHITE" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="accountNameError" layoutX="25.0" layoutY="114.0" text="Please Enter a Valid Username." textFill="RED" visible="false" />
+                              <Label fx:id="accountEmailError" layoutX="26.0" layoutY="195.0" text="Please Enter a Valid Email" textFill="RED" visible="false" />
+                              <Label fx:id="accountPasswordError" layoutX="26.0" layoutY="280.0" text="Please Enter a Valid password" textFill="RED" visible="false" />
+                              <Label fx:id="accountConfirmationError" layoutX="26.0" layoutY="359.0" text="The Password Must Match" textFill="RED" visible="false" />
+                              <Label fx:id="usernameGuidlines" translateX="345.0" translateY="80.0" visible="false">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/book-32px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                              <Label fx:id="passwordGuidelines" translateX="345.0" translateY="245.0" visible="false">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/book-32px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <Label layoutX="57.0" layoutY="80.0" text="Luxury Cars - Admin's Dashboard " textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <Pane fx:id="loading" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="793.0" visible="false">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="303.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Infinity-loading.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="panelAddManager" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="793.0" visible="false">
+               <children>
+                  <StackPane prefHeight="427.0" prefWidth="636.0">
+                     <children>
+                        <Pane fx:id="pn1Customer1" prefHeight="427.0" prefWidth="523.0" stylesheets="@style.css" translateX="180.0" translateY="180.0">
+                           <children>
+                              <TextField fx:id="managerName" layoutX="25.0" layoutY="75.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                              <Label layoutX="25.0" layoutY="63.0" text="Name" textFill="WHITE" />
+                              <TextField fx:id="managerEmail" layoutX="25.0" layoutY="6.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="150.0" />
+                              <Label layoutY="11.0" text="Email " textFill="WHITE" translateX="25.0" translateY="130.0" />
+                              <Label layoutX="25.0" layoutY="74.0" text="ID" textFill="WHITE" translateY="150.0" />
+                              <Button fx:id="enterNewManager" layoutX="25.0" layoutY="316.0" mnemonicParsing="false" onMouseClicked="#saveNewManager" prefHeight="31.0" prefWidth="350.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Add" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="managerId" layoutX="25.0" layoutY="245.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                              <Label fx:id="managerNameError" layoutX="25.0" layoutY="113.0" text="Please Enter a Valid Username" textFill="RED" visible="false" />
+                              <Label fx:id="managerEmailError" layoutX="25.0" layoutY="195.0" text="Please Enter a Valid Email" textFill="RED" visible="false" />
+                              <Label fx:id="managerUsernameGuidelines" translateX="345.0" translateY="80.0" visible="false">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/book-32px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <Label layoutX="57.0" layoutY="80.0" text="Luxury Cars - Admin's Dashboard " textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="cancelAddingManager" layoutX="675.0" layoutY="-21.0" mnemonicParsing="false" onMouseClicked="#cancelAddingNewManager" prefHeight="31.0" prefWidth="100.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Cancel" textFill="WHITE" translateY="100.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="panelAddEmployee" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="793.0" visible="false">
+               <children>
+                  <StackPane prefHeight="427.0" prefWidth="636.0">
+                     <children>
+                        <Pane fx:id="pn1Customer11" prefHeight="427.0" prefWidth="523.0" stylesheets="@style.css" translateX="180.0" translateY="180.0">
+                           <children>
+                              <TextField fx:id="employeeName" layoutX="25.0" layoutY="32.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                              <Label layoutX="25.0" layoutY="13.0" text="Name" textFill="WHITE" />
+                              <TextField fx:id="employeeEmail" layoutX="25.0" layoutY="-37.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="150.0" />
+                              <Label layoutY="-38.0" text="Email " textFill="WHITE" translateX="25.0" translateY="130.0" />
+                              <Label layoutX="25.0" layoutY="16.0" text="ID" textFill="WHITE" translateY="150.0" />
+                              <Button fx:id="enterNewEmployee" layoutX="25.0" layoutY="341.0" mnemonicParsing="false" onMouseClicked="#saveNewEmployee" prefHeight="31.0" prefWidth="350.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Add" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <TextField fx:id="employeeId" layoutX="25.0" layoutY="182.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                              <TextField fx:id="employeeManager" layoutX="25.0" layoutY="262.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                              <Label layoutX="25.0" layoutY="237.0" text="manager ID" textFill="WHITE" />
+                              <Label fx:id="employeeNameError" layoutX="25.0" layoutY="68.0" text="Please Enter a Valid Username" textFill="RED" visible="false" />
+                              <Label fx:id="employeeEmailError" layoutX="25.0" layoutY="149.0" text="Please Enter a Valid Email" textFill="RED" visible="false" />
+                              <Label fx:id="managerIdError" layoutX="25.0" layoutY="304.0" text="This Manager Is Not Registered In The System" textFill="RED" visible="false" />
+                              <Label fx:id="employeeUsernameGuidelines" translateX="345.0" translateY="35.0">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/book-32px.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <Label layoutX="57.0" layoutY="80.0" text="Luxury Cars - Admin's Dashboard " textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="cancelAddingEmployee" layoutX="657.0" layoutY="-5.0" mnemonicParsing="false" onMouseClicked="#cancelAddingNewEmployee" prefHeight="31.0" prefWidth="100.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Cancel" textFill="WHITE" translateY="90.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="panelAddToBlacklist" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="793.0" visible="false">
+               <children>
+                  <StackPane prefHeight="427.0" prefWidth="636.0">
+                     <children>
+                        <Pane fx:id="pn1Customer12" prefHeight="427.0" prefWidth="523.0" stylesheets="@style.css" translateX="180.0" translateY="180.0">
+                           <children>
+                              <TextField fx:id="blacklistName" layoutX="25.0" layoutY="75.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                              <Label layoutX="25.0" layoutY="63.0" text="Name" textFill="WHITE" />
+                              <TextField fx:id="blacklistEmail" layoutX="25.0" layoutY="6.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="150.0" />
+                              <Label layoutY="11.0" text="Email " textFill="WHITE" translateX="25.0" translateY="130.0" />
+                              <Button fx:id="enterNewBlacklistedUser" layoutX="25.0" layoutY="229.0" mnemonicParsing="false" onMouseClicked="#saveNewBlacklistedUser" prefHeight="31.0" prefWidth="350.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Add" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                              <Label fx:id="blacklistEmailError" layoutX="25.0" layoutY="197.0" text="Please Enter a Valid Email" textFill="RED" visible="false" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </StackPane>
+                  <Label layoutX="57.0" layoutY="80.0" text="Luxury Cars - Admin's Dashboard " textFill="#e7e5e5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="cancelAddingToBlacklist" layoutX="654.0" layoutY="-6.0" mnemonicParsing="false" onMouseClicked="#cancelAddingToBlacklist" prefHeight="31.0" prefWidth="100.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Cancel" textFill="WHITE" translateY="90.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            </children>
+        </StackPane>
+      <HBox alignment="CENTER_RIGHT" layoutX="1.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1050.0" style="-fx-background-color: #05071F;" stylesheets="@topBar.css">
+         <children>
+            <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onMouseClicked="#minimizeStage" prefHeight="50.0" prefWidth="59.0" styleClass="min-btn" translateX="-5.0">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="19.0" onMouseClicked="#minimizeStage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/minimize.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1030.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeApp" prefHeight="50.0" prefWidth="59.0" styleClass="close-btn" textFill="WHITE" translateX="-1.0">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/close.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </HBox>
+    </children>
+    <effect>
+        <DropShadow color="#1b1eeb" />
+    </effect>
+</AnchorPane>

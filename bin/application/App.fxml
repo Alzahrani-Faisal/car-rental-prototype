@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="1050.0" style="-fx-background-color: #02030A;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AppController">
+<children>
+        <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="525.0" style="-fx-background-color: #05071F;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="363.0" fitWidth="472.0" pickOnBounds="true" preserveRatio="true" scaleY="1.2" translateY="70.0">
+               <image>
+                  <Image url="@images/undraw_Login_re_4vu2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnAdmin" blendMode="EXCLUSION" mnemonicParsing="false" onMouseClicked="#handleClicks" prefHeight="31.0" prefWidth="167.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Login as Admin" textFill="WHITE" translateY="135.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Button>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" translateY="170.0">
+               <image>
+                  <Image url="@images/luxurycars_logo.png" />
+               </image>
+            </ImageView>
+         </children></VBox>
+      <Label fx:id="btnCustomer" accessibleRole="BUTTON" layoutX="618.0" layoutY="39.0" onMouseClicked="#handleClicks" style="-fx-cursor: hand;" text="Customer" textFill="WHITE" translateY="30.0">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="btnEmployee" accessibleRole="BUTTON" layoutX="892.0" layoutY="39.0" onMouseClicked="#handleClicks" style="-fx-cursor: hand;" text="Employee" textFill="WHITE" translateY="30.0">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="btnManager" accessibleRole="BUTTON" layoutX="757.0" layoutY="39.0" onMouseClicked="#handleClicks" style="-fx-cursor: hand;" text="Manager" textFill="WHITE" translateY="30.0">
+         <font>
+            <Font name="Candara" size="18.0" />
+         </font>
+      </Label>
+      <StackPane layoutX="597.0" layoutY="165.0" prefHeight="366.0" prefWidth="386.0" stylesheets="@style.css">
+         <children>
+            <Pane fx:id="pn1Customer" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <TextField fx:id="customerEmailField" layoutX="25.0" layoutY="23.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="40.0" />
+                  <Label layoutY="33.0" text="Email " textFill="WHITE" translateX="25.0" translateY="20.0" />
+                  <PasswordField fx:id="customerPasswordField" layoutX="25.0" layoutY="133.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020a; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                  <Label layoutX="25.0" layoutY="121.0" text="Password" textFill="WHITE" />
+                  <Button fx:id="customerLoginBtn" layoutX="23.0" layoutY="192.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="350.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Enter" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font></Button>
+                  <Label layoutY="15.0" text="No Account?" textFill="WHITE" translateX="25.0" translateY="222.0" />
+                  <Label fx:id="signupBtn" accessibleRole="BUTTON" layoutX="4.0" layoutY="16.0" onMouseClicked="#handleClicks" prefHeight="31.0" prefWidth="58.0" style="-fx-cursor: hand;" text="Sign up" textFill="#192392" translateX="110.0" translateY="216.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="successfulSignupMessage" text="You have succussfully signed up, you can login to your account." textFill="#19f84d" translateX="25.0" translateY="25.0" visible="false">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="customerLoginError" layoutX="25.0" layoutY="29.0" text="The email or the password is wrong, please try again." textFill="#ff0404" visible="false" />
+               </children>
+            </Pane>
+             <Pane fx:id="pn1Manager" prefHeight="200.0" prefWidth="200.0" visible="false">
+                 <children>
+                     <TextField fx:id="managerEmailField" layoutX="25.0" layoutY="23.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="40.0" />
+                     <Label layoutY="26.0" text="Email " textFill="WHITE" translateX="25.0" translateY="20.0" />
+                     <PasswordField fx:id="managerIDField" layoutX="25.0" layoutY="133.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020a; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                     <Label layoutX="25.0" layoutY="113.0" text="ID" textFill="WHITE" />
+                     <Button fx:id="managerLoginBtn" layoutX="23.0" layoutY="194.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="350.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Enter" textFill="WHITE">
+                         <font>
+                             <Font name="System Bold" size="15.0" />
+                         </font></Button>
+                  <Label fx:id="managerLoginError" layoutX="25.0" layoutY="21.0" text="The email or the ID is wrong, please try again." textFill="RED" visible="false" />
+                 </children>
+             </Pane>
+             <Pane fx:id="pn1Employee" prefHeight="200.0" prefWidth="200.0" visible="false">
+                 <children>
+                     <TextField fx:id="employeeEmailField" layoutX="25.0" layoutY="33.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="40.0" />
+                     <Label layoutY="38.0" text="Email " textFill="WHITE" translateX="25.0" translateY="20.0" />
+                     <PasswordField fx:id="employeeIDField" layoutX="25.0" layoutY="139.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020a; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                     <Label layoutX="25.0" layoutY="120.0" text="ID" textFill="WHITE" />
+                     <Button fx:id="employeeLoginBtn" layoutX="23.0" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="350.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Enter" textFill="WHITE">
+                         <font>
+                             <Font name="System Bold" size="15.0" />
+                         </font></Button>
+                  <Label fx:id="employeeLoginError" layoutX="24.0" layoutY="26.0" text="The email or the ID is wrong, please try again." textFill="RED" visible="false" />
+                 </children>
+             </Pane>
+             <Pane fx:id="pn1Admin" prefHeight="200.0" prefWidth="200.0" visible="false">
+                 <children>
+                     <TextField fx:id="adminEmailField" layoutX="25.0" layoutY="44.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="40.0" />
+                     <Label layoutY="48.0" text="Email " textFill="WHITE" translateX="25.0" translateY="20.0" />
+                     <PasswordField fx:id="adminPasswordField" layoutX="25.0" layoutY="150.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020a; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                     <Label layoutX="25.0" layoutY="135.0" text="Password" textFill="WHITE" />
+                     <Button fx:id="adminLoginBtn" layoutX="23.0" layoutY="211.0" mnemonicParsing="false" onMouseClicked="#login" prefHeight="25.0" prefWidth="350.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Enter" textFill="WHITE">
+                         <font>
+                             <Font name="System Bold" size="15.0" />
+                         </font></Button>
+                  <Label fx:id="adminLoginError" layoutX="23.0" layoutY="34.0" text="The email or the password is wrong, please try again." textFill="RED" visible="false" />
+                 </children>
+             </Pane>
+            <Pane fx:id="pn1Signup" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="386.0" translateY="40.0" visible="false">
+               <children>
+                  <TextField fx:id="emailField" layoutX="25.0" layoutY="59.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" translateY="40.0" />
+                  <Label fx:id="nameRegistrationError" layoutX="25.0" layoutY="63.0" text="*Please enter a valid name" textFill="#ff2929" visible="false" />
+                  <Label layoutY="67.0" text="Email " textFill="WHITE" translateX="25.0" translateY="20.0" />
+                  <PasswordField fx:id="passwordField" layoutX="25.0" layoutY="171.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020a; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                  <Label layoutX="25.0" layoutY="159.0" text="Password" textFill="WHITE" />
+                  <Button fx:id="registerBtn" layoutX="23.0" layoutY="307.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="350.0" style="-fx-cursor: hand;" stylesheets="@styleStartBtn.css" text="Enter" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="nameField" layoutX="25.0" layoutY="28.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020A; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                  <Label layoutX="25.0" layoutY="15.0" text="Name" textFill="WHITE" />
+                  <Label layoutX="25.0" layoutY="227.0" text="Confirm Password" textFill="WHITE" />
+                  <PasswordField fx:id="confirmationPasswordField" layoutX="25.0" layoutY="244.0" prefHeight="25.0" prefWidth="350.0" style="-fx-background-color: #02020a; -fx-border-style: hidden hidden solid hidden; -fx-border-width: 1.5; -fx-border-color: #111975;" styleClass="input" />
+                  <Label fx:id="emailRegistrationError" layoutX="27.0" layoutY="132.0" text="*Please enter a valid email" textFill="#ff2929" visible="false" />
+                  <Label fx:id="passwordRegistrationError" layoutX="27.0" layoutY="203.0" text="*Please enter a valid password" textFill="#ff2929" visible="false" />
+                  <Label fx:id="confirmationPasswordError" layoutX="25.0" layoutY="276.0" text="*The password should match" textFill="#ff2929" visible="false" />
+                  <Label fx:id="EmptyFormMessage" layoutX="25.0" layoutY="-6.0" text="*Please fill in all fields" textFill="RED" visible="false" />
+                  <Label fx:id="passwordGuidelines" translateX="345.0" translateY="170.0">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/book-32px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Label fx:id="usernameGuidelines" layoutX="10.0" layoutY="10.0" translateX="335.0" translateY="17.0">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/book-32px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="loading" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="386.0" visible="false">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="125.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Infinity-loading.gif" />
+                     </image></ImageView>
+               </children>
+            </Pane>
+         </children></StackPane>
+      <Label fx:id="loginPageText" alignment="CENTER" layoutX="624.0" layoutY="107.0" prefHeight="42.0" prefWidth="350.0" text="Sign In" textFill="WHITE" translateY="30.0">
+         <font>
+            <Font name="Candara Bold" size="34.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_RIGHT" layoutX="1.0" layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1050.0" stylesheets="@topBar.css">
+         <children>
+            <Button mnemonicParsing="false" onMouseClicked="#minimizeStage" prefHeight="50.0" prefWidth="59.0" styleClass="min-btn">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="19.0" onMouseClicked="#minimizeStage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/minimize.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1030.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeApp" prefHeight="50.0" prefWidth="59.0" styleClass="close-btn" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS Bold" size="14.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/close.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children></HBox>
+    </children>
+    <effect>
+        <DropShadow height="194.97" radius="53.4925">
+         <color>
+            <Color blue="0.5299999713897705" green="0.1339133381843567" opacity="0.25519031286239624" red="0.12720000743865967" />
+         </color></DropShadow>
+    </effect>
+</AnchorPane>

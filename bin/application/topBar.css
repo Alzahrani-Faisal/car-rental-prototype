@@ -1,0 +1,16 @@
+.close-btn {
+    -fx-background-color: transparent;
+}
+.close-btn:hover {
+    -fx-background-color: #E81123;
+    -fx-cursor: hand;
+}
+.min-btn {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+.min-btn:hover {
+    -fx-background-color: #171717;
+    -fx-cursor: hand;
+}
